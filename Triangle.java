@@ -4,22 +4,15 @@ public class Triangle {
   private Point p3;
 
   public Triangle(Point One, Point Two, Point Three) {
-    Point a = new Point(One);
-    Point b = new Point(Two);
-    Point c = new Point(Three);
-    p1 = a;
-    p2 = b;
-    p3 = c;
-
+    p1 = new Point(One);
+    p2 = new Point(Two);
+    p3 = new Point(Three);
   }
 
   public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
-    Point a = new Point(x1, y1);
-    Point b = new Point(x2, y2);
-    Point c = new Point(x3, y3);
-    p1 = a;
-    p2 = b;
-    p3 = c;
+    p1 = new Point(x1, y1);
+    p2 = new Point(x2, y2);
+    p3 = new Point(x3, y3);
   }
 
   public double getPerimeter() {
