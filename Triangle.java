@@ -1,13 +1,7 @@
-//fix up copying points + making up new points?
-//might be just original points being used right now
-
 public class Triangle {
   private Point p1;
   private Point p2;
   private Point p3;
-  private int v1;
-  private int v2;
-  private int v3;
 
   public Triangle(Point One, Point Two, Point Three) {
     Point a = new Point(One);
@@ -37,31 +31,33 @@ public class Triangle {
 
   public Point getVertex(int index) {
     if (index == 0) {
-      return p1;
+      Point i = new Point(p1);
+      return i;
     }
     if (index == 1) {
-      return p2;
+      Point o = new Point(p2);
+      return o;
     }
-    return p3;
+    if (index == 2) {
+      Point p = new Point(p3);
+      return p;
+    }
+    return p1; // when index != 0,1,2. Default pt is first pt.
   }
 
   public void setVertex(int index, Point newP) {
-    Point x,y,z;
     if (index == 0) {
-      x = p1;
       p1 = newP;
     }
     if (index == 1) {
-      y = p2;
       p2 = newP;
     }
     if (index == 2) {
-      z = p3;
       p3 = newP;
     }
   }
 
   public String toString() {
-    return "Triangle: A(" + p1 + ") B(" + p2 + ") C(" + p3 + ")";
+    return "A(" + p1 + ") B(" + p2 + ") C(" + p3 + ")";
   }
 }
